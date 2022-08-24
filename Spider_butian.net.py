@@ -30,7 +30,7 @@ def NumSpide(headers):
 
 def GetSiteTitle(response):
 	soup = BeautifulSoup(response.text, "html.parser")
-	title = soup.find('input', id='inputCompy')["value"]
+	title = soup.find('input', 'input-xlarge')["value"]
 	url = soup.find('input',{'name':'host'})["value"]
 	if 'http' not in url:
 		url = 'http://'+url
